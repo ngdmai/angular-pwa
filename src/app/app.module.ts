@@ -8,9 +8,15 @@ import { environment } from '../environments/environment';
 
 import { PostsComponent } from './posts/posts.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
-  declarations: [AppComponent, PostsComponent, PostDetailComponent],
+  declarations: [
+    AppComponent,
+    PostsComponent,
+    PostDetailComponent,
+    PostComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

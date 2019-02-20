@@ -1,6 +1,1 @@
-<li *ngFor="let post of posts">
-  {{ post.userId }}
-  {{ post.id }}
-  {{ post.title }}
-  {{ post.body }}
-</li>
+<app-post *ngFor="let post of posts" [post]="post"></app-post>
