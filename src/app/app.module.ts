@@ -11,7 +11,7 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
 import { PostComponent } from './post/post.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatCardModule } from '@angular/material';
+import { MatCardModule, MatButtonModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,8 @@ import { MatCardModule } from '@angular/material';
       enabled: environment.production
     }),
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

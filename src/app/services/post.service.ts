@@ -4,7 +4,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { Post } from '../models/post';
+import { Post } from '../models/Post';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -24,6 +24,13 @@ export class PostService {
     return this.http
       .get<Post[]>(`${this.postsUrl}`)
       .pipe(catchError(this.handleError('getPosts', [])));
+  }
+
+  getPost(id: number): Observable<Post> {
+    const url = `${this.postsUrl}/${id}`;
+    return this.http
+      .get<Post>(url)
+      .pipe(catchError(this.handleError<Post>(`getPost id=${id}`)));
   }
 
   private handleError<T>(operation = 'operation', result?: T) {
